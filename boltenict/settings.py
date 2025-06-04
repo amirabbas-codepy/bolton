@@ -75,16 +75,23 @@ WSGI_APPLICATION = 'boltenict.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'boltenpg',
+#         'USER': 'boltenpg_user',
+#         'PASSWORD': 'ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x',
+#         'HOST': 'dpg-d10a2a63jp1c739p48mg-a.render.com',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'boltenpg',
-        'USER': 'boltenpg_user',
-        'PASSWORD': 'ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x',
-        'HOST': 'dpg-d10a2a63jp1c739p48mg-a.render.com',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL')
+    )
 }
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
