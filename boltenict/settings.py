@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-skei8d^)6xb=m%gt+!$d*iz^at=ny3abn=03m+nd-i@ci9%s2-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-5704e.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -75,18 +75,16 @@ WSGI_APPLICATION = 'boltenict.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
 DATABASES = {
-    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'boltenpg',
+        'USER': 'boltenpg_user',
+        'PASSWORD': 'ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x',
+        'HOST': 'postgresql://boltenpg_user:ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x@dpg-d10a2a63jp1c739p48mg-a/boltenpg',
+        'PORT': '5432',
+    }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
