@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'boltenpg',
         'USER': 'boltenpg_user',
         'PASSWORD': 'ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x',
-        'HOST': 'dpg-d10a2a63jp1c739p48mg-a/boltenpg',
+        'HOST': 'dpg-d10a2a63jp1c739p48mg-a.render.com',
         'PORT': '5432',
     }
 }
