@@ -79,6 +79,7 @@ def traket_item_mpage(request):
             form_data = data.cleaned_data
             keyword = form_data.get('keyword')
             frequency_days = form_data.get('frequency_days')
+            print('key word:::::::::', keyword)
 
               
             url = f'https://news.google.com/rss/search?q={keyword}&hl=en-US&gl=US&ceid=US:en'
