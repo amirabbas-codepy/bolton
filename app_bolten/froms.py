@@ -6,7 +6,7 @@ class LoginForm(forms.Form):
     # phone = forms.CharField(max_length=20, required=True)
 
 class TraketForm(forms.Form):
-    keyword = forms.CharField(max_length=250)
+    keyword = forms.CharField(max_length=200)
     frequency_days = forms.IntegerField()
 
 class DeletedForm(forms.Form):
