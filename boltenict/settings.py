@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'boltenpg',
         'USER': 'boltenpg_user',
         'PASSWORD': 'ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x',
-        'HOST': 'postgresql://boltenpg_user:ojHtiZLK8yf2LZWqkYxaiXCsFzDduO9x@dpg-d10a2a63jp1c739p48mg-a/boltenpg',
+        'HOST': 'dpg-d10a2a63jp1c739p48mg-a/boltenpg',
         'PORT': '5432',
     }
 }
