@@ -9,7 +9,7 @@ class Subscriber(AbstractUser):
 
 class NewsItem(models.Model):
     # فیلدهای قبلی
-    title = models.CharField(max_length=500)
+    title = models.CharField(max_length=200)
     link = models.URLField()
     published = models.DateTimeField(auto_now_add=True)
     update_news_time = models.DateField(null=True)
@@ -19,7 +19,7 @@ class NewsItem(models.Model):
     user = models.ForeignKey(Subscriber, on_delete=models.CASCADE)
     frequency_days = models.IntegerField(default=7)
     time_updated = models.DateTimeField(auto_now=True, null=True)
-    news_published_date = models.CharField(null=True, max_length=250)
+    news_published_date = models.CharField(null=True, max_length=200)
 
     def __str__(self):
         return self.keyword
