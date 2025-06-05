@@ -10,7 +10,7 @@ class Subscriber(AbstractUser):
 class NewsItem(models.Model):
     # فیلدهای قبلی
     title = models.CharField(max_length=200)
-    link = models.URLField()
+    link = models.URLField(max_length=500)
     published = models.DateTimeField(auto_now_add=True)
     update_news_time = models.DateField(null=True)
     image_url = models.URLField(blank=True, null=True)
